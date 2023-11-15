@@ -51,20 +51,20 @@ fun DataPelanggan(
         Text(text = "Data Pelanggan",
             fontWeight = FontWeight.Bold,
             fontSize = 30.sp)
-        Spacer(modifier = Modifier.padding(20.dp))
+        Spacer(modifier = Modifier.padding(15.dp))
         OutlinedTextField(value = namaTxt, onValueChange = {namaTxt = it},
             label = {
-                Text(text = "Nama")
+                Text(text = "Masukkan Nama")
             })
-        Spacer(modifier = Modifier.padding(20.dp))
+        Spacer(modifier = Modifier.padding(15.dp))
         OutlinedTextField(value = teleponTxt, onValueChange = {teleponTxt = it},
             label = {
-                Text(text = "Telepom")
+                Text(text = "Masukkan Telepon")
             })
-        Spacer(modifier = Modifier.padding(20.dp))
+        Spacer(modifier = Modifier.padding(15.dp))
         OutlinedTextField(value = alamatTxt, onValueChange = {alamatTxt = it},
             label = {
-                Text(text = "Alamat")
+                Text(text = "Masukkan Alamat")
             })
         Spacer(modifier = Modifier.padding(20.dp))
         Row{
