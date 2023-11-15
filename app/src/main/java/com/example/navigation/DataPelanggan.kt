@@ -66,7 +66,7 @@ fun DataPelanggan(
             label = {
                 Text(text = "Alamat")
             })
-        Spacer(modifier = Modifier.padding(16.dp))
+        Spacer(modifier = Modifier.padding(20.dp))
         Row{
             Button(onClick = {onBackButtonClick(listDataTxt)}) {
                 Text(text = stringResource(id = R.string.back_button))
