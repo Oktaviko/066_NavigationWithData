@@ -4,6 +4,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
@@ -104,12 +105,21 @@ fun HalamanSatu(
                 OutlinedButton(modifier = Modifier.weight(1f),
                     onClick = onCancelButtonClicked
                 ){
-                    Button(modifier = Modifier.weight(1f),
-                        enabled = textJmlBeli.isNotEmpty(),
-                        onClick = onNextButtonClicked
-                    ){
-                        Text(stringResource(R.string.next))
+                    Row{
+                        Button(modifier = Modifier.weight(1f),
+                            onClick = onCancelButtonClicked
+                        ){
+                            Text(stringResource(R.string.back_button))
+                        }
+                        Spacer(modifier = Modifier.padding(30.dp))
+                        Button(modifier = Modifier.weight(1f),
+                            enabled = textJmlBeli.isNotEmpty(),
+                            onClick = onNextButtonClicked
+                        ){
+                            Text(stringResource(R.string.next))
+                        }
                     }
+
                 }
             }
         }
