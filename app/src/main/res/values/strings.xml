@@ -16,4 +16,5 @@
     <string name="subtotal_price">Subtotal : Rp %s</string>
     <string name="total_price">Total %s</string>
     <string name="submit">Submit</string>
+    <string name="nama">Nama</string>
 </resources>
