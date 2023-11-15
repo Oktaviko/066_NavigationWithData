@@ -26,6 +26,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 
 enum class PengelolaHalaman {
     Home,
+    Customer,
     Rasa,
     Summary
 }
