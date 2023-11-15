@@ -2,6 +2,7 @@ package com.example.navigation
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -17,7 +18,9 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -45,24 +48,33 @@ fun DataPelanggan(
             .padding(16.dp)
             .fillMaxSize()
     ){
+        Text(text = "Data Pelanggan",
+            fontWeight = FontWeight.Bold,
+            fontSize = 30.sp)
+        Spacer(modifier = Modifier.padding(20.dp))
         OutlinedTextField(value = namaTxt, onValueChange = {namaTxt = it},
             label = {
                 Text(text = "Nama")
             })
+        Spacer(modifier = Modifier.padding(20.dp))
         OutlinedTextField(value = teleponTxt, onValueChange = {teleponTxt = it},
             label = {
                 Text(text = "Telepom")
             })
+        Spacer(modifier = Modifier.padding(20.dp))
         OutlinedTextField(value = alamatTxt, onValueChange = {alamatTxt = it},
             label = {
                 Text(text = "Alamat")
             })
         Spacer(modifier = Modifier.padding(16.dp))
-        Button(onClick = {onBackButtonClick(listDataTxt)}) {
-            Text(text = stringResource(id = R.string.back_button))
-        }
-        Button(onClick = {onSubmitButtonClick(listDataTxt)}) {
-            Text(text = stringResource(id = R.string.submit))
+        Row{
+            Button(onClick = {onBackButtonClick(listDataTxt)}) {
+                Text(text = stringResource(id = R.string.back_button))
+            }
+            Spacer(modifier = Modifier.padding(50.dp))
+            Button(onClick = {onSubmitButtonClick(listDataTxt)}) {
+                Text(text = stringResource(id = R.string.submit))
+            }
         }
     }
 }
